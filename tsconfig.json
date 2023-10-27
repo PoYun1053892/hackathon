@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ES6",
+    "moduleResolution": "node",
+    "importsNotUsedAsValues": "error",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "paths": {
+      "@api/*": ["./src/api/*"],
+      "@data/*": ["./src/data/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@use/*": ["./src/use/*"],
+      "@images/*": ["./public/images/*"]
+    }
+  }
+}

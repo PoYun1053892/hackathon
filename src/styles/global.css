@@ -1,0 +1,110 @@
+@import "./common.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply w-full text-gray-800 m-0 select-none;
+    font-family: "Gen Jyuu Gothic";
+    -webkit-touch-callout: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply text-gray-900 bg-gray-100;
+  }
+
+  *,
+  *:before,
+  *:after {
+    @apply box-border;
+  }
+}
+
+.slick-slider {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.slick-list {
+  position: relative;
+  display: block !important;
+  overflow: hidden;
+  padding: 0px !important;
+  width: 100%;
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 230px;
+  display: flex;
+}
+.slick-slide div {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide img {
+  object-fit: cover;
+  border-radius: 2px;
+  max-width: 150px !important;
+  width: 100px;
+}
+.slick-slide div div span {
+  margin-top: 10px;
+  width: inherit;
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.slick-slide:not(.slick-active) {
+  position: relative;
+  z-index: 997;
+  transform: scale(1, 1);
+  transition: all 1s;
+}
+
+.slick-slide.slick-active.slick-current {
+  position: relative;
+  z-index: 999;
+  transform: scale(1.6, 1.6);
+  transition: all 1s;
+}
+.slick-slide.slick-active:not(.slick-current) img,
+.slick-slide.slick-active.slick-current img,
+.slick-slide:not(.slick-active) img {
+  width: 100% !important;
+}
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+.custom-prevArrow {
+  left: -10px;
+}
+.custom-nextArrow {
+  right: -10px;
+}
+
+.clip-path {
+  clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+}
+
+.trapezoid {
+  clip-path: polygon(55% 0, 100% 0%, 100% 100%, 0% 100%);
+}
